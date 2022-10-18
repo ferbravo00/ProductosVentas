@@ -14,23 +14,36 @@ import java.util.ArrayList;
 public class Orden {
     private int idOrden;
     private ArrayList<Producto> productos = new ArrayList<>();
-    private int contadorOrdenes;
+    private static int contadorOrdenes;
     private static int maxProductos = 10;
     
-    private static int cont;
+//    private static int cont;
     
     public Orden() {
-        this.contadorOrdenes=++Orden.cont;
+        this.idOrden = ++contadorOrdenes;
     }
     
-    public static void agregarProducto(Producto producto){
-        while(maxProductos == 0){
+    public void agregarProducto(Producto producto){
+        if(maxProductos == 0){
             System.out.println("La lista de productos esta llena");
+        }else{
+            maxProductos--;
+            this.productos.add(producto);
         }
-        //ArrayList<Producto> productos = new ArrayList<Producto>();
-        maxProductos--;
-        this.productos.add(producto);
-        //productos[Producto.contadorProducto]=producto;
+    }
+    
+    public double calcularTotal(){
+        double total=0;
+        for (Producto prod : productos) {
+            total+=prod.getPrecio() ;
+        }
+        return total;
+    }
+    
+    public void mostrarOrden(){
+        for (Producto prod : productos) {
+            System.out.println(idOrden +" "+prod); ;
+        }
     }
     
 }

@@ -16,16 +16,16 @@ public class Producto {
     
     private static int contadorProducto;
     
-    private static int cont;
+//    private static int cont;
 
-    public Producto(int idProducto, String nombre, double precio) {
-        this.idProducto = idProducto;
+    public Producto(String nombre, double precio) {
+        this.idProducto = ++contadorProducto;
         this.nombre = nombre;
         this.precio = precio;
     }
 
     public Producto() {
-        this.contadorProducto = ++Producto.cont;
+        this.idProducto = ++contadorProducto;
     }
 
     public int getIdProducto() {
@@ -92,10 +92,9 @@ public class Producto {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Producto{idProducto=").append(idProducto);
-        sb.append(", nombre=").append(nombre);
-        sb.append(", precio=").append(precio);
-        sb.append(", contadorProducto=").append(contadorProducto);
+        sb.append("{idProducto= ").append(idProducto);
+        sb.append(", nombre= ").append(nombre);
+        sb.append(", precio= ").append(precio+"€");
         sb.append('}');
         return sb.toString();
     }
