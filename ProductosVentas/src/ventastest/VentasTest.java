@@ -17,6 +17,7 @@ public class VentasTest {
     public static void main(String[] args) {
         // TODO code application logic here
         Orden o1 = new Orden ();
+        Orden o2 = new Orden ();
         Producto p1 = new Producto("Patata", 2);
         Producto p2 = new Producto("Cafe", 1.5);
         Producto p3 = new Producto("Soja", 0.6);
@@ -28,7 +29,6 @@ public class VentasTest {
         Producto p9 = new Producto("Soja", 0.6);
         Producto p10 = new Producto("Patata", 2);
         Producto p11 = new Producto("Cafe", 1.5);
-        Producto p12 = new Producto("Soja", 0.6);
         
         o1.agregarProducto(p1);
         o1.agregarProducto(p2);
@@ -41,9 +41,16 @@ public class VentasTest {
         o1.agregarProducto(p9);
         o1.agregarProducto(p10);
         o1.agregarProducto(p11);
-        o1.agregarProducto(p12);
+        
+        
+        o2.agregarProducto(p1);
+        o2.agregarProducto(p2);
+        o2.agregarProducto(p3);
+        o2.agregarProducto(p4);
+        o2.agregarProducto(p5);
         
         o1.mostrarOrden();
+        o2.mostrarOrden();
         
         System.out.println(o1.calcularTotal()+"€");
         

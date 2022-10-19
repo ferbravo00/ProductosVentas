@@ -23,14 +23,24 @@ public class Orden {
         this.idOrden = ++contadorOrdenes;
     }
     
-    public void agregarProducto(Producto producto){
-        if(maxProductos == 0){
+//    public void agregarProducto(Producto producto){
+//        if(maxProductos == 0){
+//            System.out.println("La lista de productos esta llena");
+//        }else{
+//            maxProductos--;
+//            this.productos.add(producto);
+//        }
+//    }
+    
+    
+    public void agregarProducto(Producto producto){     //con este codigo se pueden poner mas ordenes 
+        if(producto.getIdProducto()>maxProductos){
             System.out.println("La lista de productos esta llena");
         }else{
-            maxProductos--;
             this.productos.add(producto);
         }
     }
+    
     
     public double calcularTotal(){
         double total=0;
