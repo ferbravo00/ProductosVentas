@@ -20,13 +20,13 @@ public class VentasTest {
         Orden o2 = new Orden ();
         Producto p1 = new Producto("Patata", 2);
         Producto p2 = new Producto("Cafe", 1.5);
-        Producto p3 = new Producto("Soja", 0.6);
+        Producto p3 = new Producto("Soja", 0.4);
         Producto p4 = new Producto("Patata", 2);
         Producto p5 = new Producto("Cafe", 1.5);
         Producto p6 = new Producto("Soja", 0.6);
         Producto p7 = new Producto("Patata", 2);
         Producto p8 = new Producto("Cafe", 1.5);
-        Producto p9 = new Producto("Soja", 0.6);
+        Producto p9 = new Producto("Soja", 0.25);
         Producto p10 = new Producto("Patata", 2);
         Producto p11 = new Producto("Cafe", 1.5);
         
@@ -49,10 +49,13 @@ public class VentasTest {
         o2.agregarProducto(p4);
         o2.agregarProducto(p5);
         
+        
+        
+        
         o1.mostrarOrden();
         o2.mostrarOrden();
         
-        System.out.println(o1.calcularTotal()+"€");
+        System.out.println("PRECIO TOTAL: "+o1.calcularTotal()+"€");
         
     }
     

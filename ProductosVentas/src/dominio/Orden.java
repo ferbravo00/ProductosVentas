@@ -34,7 +34,7 @@ public class Orden {
     
     
     public void agregarProducto(Producto producto){     //con este codigo se pueden poner mas ordenes 
-        if(producto.getIdProducto()>maxProductos){
+        if(productos.size()>=maxProductos){             //si pongo productos.getIdProducto() no puedo repetir ID
             System.out.println("La lista de productos esta llena");
         }else{
             this.productos.add(producto);
