@@ -50,7 +50,7 @@ public class VentasTest {
         o2.agregarProducto(p4);
         
         
-//        o3.agregarProducto(p5);
+        o3.agregarProducto(p5);
         
         
         
@@ -60,7 +60,12 @@ public class VentasTest {
         o3.mostrarOrden();
         
         System.out.println("");
-        System.out.println("PRECIO TOTAL: "+o1.calcularTotal()+"€");
+        System.out.println("PRECIO TOTAL DEL ORDEN 1: "+o1.calcularTotal()+"€");
+        System.out.println("");
+        System.out.println("PRECIO TOTAL DEL ORDEN 2: "+o2.calcularTotal()+"€");
+        System.out.println("");
+        System.out.println("PRECIO TOTAL DEL ORDEN 3: "+o3.calcularTotal()+"€");
+        
         
     }
     
