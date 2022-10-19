@@ -35,7 +35,7 @@ public class Orden {
     
     public void agregarProducto(Producto producto){     //con este codigo se pueden poner mas ordenes 
         if(productos.size()>=maxProductos){             //si pongo productos.getIdProducto() no puedo repetir ID
-            System.out.println("La lista de productos esta llena");
+            System.out.println("La lista de productos de la ORDEN "+idOrden+" esta llena");
         }else{
             this.productos.add(producto);
         }
@@ -51,8 +51,18 @@ public class Orden {
     }
     
     public void mostrarOrden(){
+        if(productos.size()>1){
+            System.out.println("");
+            System.out.println("Hay "+productos.size()+" productos en la ORDEN "+idOrden);
+        }else if(productos.size()==1){
+            System.out.println("");
+            System.out.println("Hay 1 producto en la ORDEN "+idOrden);
+        }else{
+            System.out.println("");
+            System.out.println("NO hay producto en la ORDEN "+idOrden);
+        }
         for (Producto prod : productos) {
-            System.out.println(idOrden +" "+prod); ;
+            System.out.println(idOrden +" "+prod); 
         }
     }
     
