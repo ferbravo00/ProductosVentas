@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package dominio;
+import com.datos.acceso.IImplementacion;
 import dominio.*;
 import java.util.ArrayList;
 
@@ -38,6 +39,7 @@ public class Orden {
             System.out.println("La lista de productos de la ORDEN "+idOrden+" esta llena");
         }else{
             this.productos.add(producto);
+            IImplementacion.agregar("nombre",producto.getNombre());
         }
     }
     

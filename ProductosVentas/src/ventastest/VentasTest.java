@@ -5,6 +5,7 @@
  */
 package ventastest;
 import dominio.*;
+import com.datos.acceso.*;
 /**
  *
  * @author Alumno Mañana
@@ -66,6 +67,8 @@ public class VentasTest {
         System.out.println("");
         System.out.println("PRECIO TOTAL DEL ORDEN 3: "+o3.calcularTotal()+"€");
         
+        
+        IImplementacion.leer("nombre");
         
     }
     
